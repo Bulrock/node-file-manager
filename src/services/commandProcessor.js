@@ -25,7 +25,7 @@ export default function processCommand(command) {
       catHandler();
       break;
     case 'cd':
-      cdHandler();
+      cdHandler(...args);
       break;
     case 'compress':
       compressHandler();
