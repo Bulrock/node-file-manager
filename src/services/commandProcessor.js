@@ -20,7 +20,7 @@ export default function processCommand(command) {
 
   switch (cmd) {
     case 'add':
-      addHandler();
+      addHandler(...args);
       break;
     case 'cat':
       catHandler(...args);
