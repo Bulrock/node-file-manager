@@ -29,13 +29,13 @@ export default async function processCommand(command) {
       await cdHandler(...args);
       break;
     case 'compress':
-      await compressHandler();
+      await compressHandler(args);
       break;
     case 'cp':
       await cpHandler(args);
       break;
     case 'decompress':
-      await decompressHandler();
+      await decompressHandler(args);
       break;
     case 'hash':
       await hashHandler(...args);

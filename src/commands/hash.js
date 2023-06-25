@@ -15,7 +15,6 @@ export default async function hashHandler(filePath) {
                 .digest('hex');
     console.log(hash);
   } catch (err){
-    console.error(err);
     console.error(EXEC_ERROR_MESSAGE);
   }
 }
