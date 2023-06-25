@@ -32,7 +32,7 @@ export default function processCommand(command) {
       compressHandler();
       break;
     case 'cp':
-      cpHandler();
+      cpHandler(args);
       break;
     case 'decompress':
       decompressHandler();
