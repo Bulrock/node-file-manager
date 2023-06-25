@@ -47,7 +47,7 @@ export default function processCommand(command) {
       mvHandler(args);
       break;
     case 'os':
-      osHandler();
+      osHandler(...args);
       break;
     case 'rm':
       rmHandler(...args);
