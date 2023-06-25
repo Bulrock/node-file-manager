@@ -44,7 +44,7 @@ export default function processCommand(command) {
       lsHandler();
       break;
     case 'mv':
-      mvHandler();
+      mvHandler(args);
       break;
     case 'os':
       osHandler();
