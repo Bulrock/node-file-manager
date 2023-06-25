@@ -12,7 +12,7 @@ export default async function compressHandler([pathToFile, pathToCompressedFile]
 
     const { base } = parse(pathToFile);
     const compressedFileName = `${base}.br`;
-    
+
     const readableStream = createReadStream(resolve(pathToFile));
     const writableStream = createWriteStream(resolve(pathToCompressedFile, compressedFileName));
     const brotli = createBrotliCompress();

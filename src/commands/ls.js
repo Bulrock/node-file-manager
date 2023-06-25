@@ -22,7 +22,8 @@ export default async function lsHandler() {
 
   const content = [...folders, ...filesList];
 
-  const parsedList = content.map((item) => ({ Name: item, Type: lstatSync(join(cwd(), item)).isDirectory() ? 'Folder' : 'File' }));
+  const parsedList = content.map((item) => (
+    { Name: item, Type: lstatSync(join(cwd(), item)).isDirectory() ? 'Folder' : 'File' }));
 
   console.table(parsedList);
 }

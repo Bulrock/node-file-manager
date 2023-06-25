@@ -3,7 +3,6 @@ import { pipeline } from 'stream/promises';
 import { resolve, parse } from 'path';
 import { EXEC_ERROR_MESSAGE, INVALID_INPUT_MESSGE } from '../constants/constants.js';
 
-
 export default async function cpHandler([filePath, destPath]) {
   try {
     if(!filePath || !destPath) {
