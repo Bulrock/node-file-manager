@@ -53,7 +53,7 @@ export default function processCommand(command) {
       rmHandler();
       break;
     case 'rn':
-      rnHandler();
+      rnHandler(args);
       break;
     case 'up':
       upHandler();

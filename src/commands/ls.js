@@ -3,25 +3,25 @@ import { readdir } from 'fs/promises';
 import { lstatSync } from 'fs';
 
 export default async function lsHandler() {
-    const files = await readdir(cwd(), {withFileTypes: true});
+  const files = await readdir(cwd(), {withFileTypes: true});
 
-    const folders = [];
-    const filesList = [];
+  const folders = [];
+  const filesList = [];
 
-    files.forEach((file) => {
-      if (file.isDirectory()) {
-        folders.push(file.name);
-      } else {
-        filesList.push(file.name);
-      }
-    });
+  files.forEach((file) => {
+    if (file.isDirectory()) {
+      folders.push(file.name);
+    } else {
+      filesList.push(file.name);
+    }
+  });
 
-    folders.sort();
-    filesList.sort();
+  folders.sort();
+  filesList.sort();
 
-    const content = [...folders, ...filesList];
+  const content = [...folders, ...filesList];
 
-    const parsedList = content.map((item) => ({ Name: item, Type: lstatSync(item).isDirectory() ? 'Folder' : 'File' }));
+  const parsedList = content.map((item) => ({ Name: item, Type: lstatSync(item).isDirectory() ? 'Folder' : 'File' }));
 
-    console.table(parsedList);
+  console.table(parsedList);
 }
