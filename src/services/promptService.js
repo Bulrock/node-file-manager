@@ -7,15 +7,15 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-export default function promptCommand() {
-  rl.question('', (command) => {
+export default async function promptCommand() {
+  rl.question('', async (command) => {
     try {
-      processCommand(command);
+      await processCommand(command);
     } catch (err) {
       console.error(err.message)
     }
-    pwd();
 
     promptCommand();
+    pwd();
   });
 };

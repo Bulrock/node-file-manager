@@ -1,3 +1,3 @@
-export default function compressHandler() {
+export default async function compressHandler() {
   console.log('COMPRESS')
 }

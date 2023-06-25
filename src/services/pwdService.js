@@ -1,5 +1,6 @@
 import { cwd } from 'process';
+import os from 'os';
 
 export const pwd = () => {
-  console.log(`You are currently in ${cwd()}`);
+  console.log(`${os.EOL}You are currently in ${cwd()}`);
 }

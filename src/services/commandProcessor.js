@@ -15,45 +15,45 @@ import {
   upHandler } from '../commands/index.js';
 import { INVALID_INPUT_MESSGE } from '../constants/constants.js';
 
-export default function processCommand(command) {
+export default async function processCommand(command) {
   const [cmd, ...args] = command.split(' ');
 
   switch (cmd) {
     case 'add':
-      addHandler(...args);
+      await addHandler(...args);
       break;
     case 'cat':
-      catHandler(...args);
+      await catHandler(...args);
       break;
     case 'cd':
-      cdHandler(...args);
+      await cdHandler(...args);
       break;
     case 'compress':
-      compressHandler();
+      await compressHandler();
       break;
     case 'cp':
-      cpHandler(args);
+      await cpHandler(args);
       break;
     case 'decompress':
-      decompressHandler();
+      await decompressHandler();
       break;
     case 'hash':
-      hashHandler();
+      await hashHandler(...args);
       break;
     case 'ls':
-      lsHandler();
+      await lsHandler();
       break;
     case 'mv':
-      mvHandler(args);
+      await mvHandler(args);
       break;
     case 'os':
       osHandler(...args);
       break;
     case 'rm':
-      rmHandler(...args);
+      await rmHandler(...args);
       break;
     case 'rn':
-      rnHandler(args);
+      await rnHandler(args);
       break;
     case 'up':
       upHandler();

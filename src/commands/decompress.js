@@ -1,3 +1,3 @@
-export default function decompressHandler() {
+export default async function decompressHandler() {
   console.log('DECOMPRESS')
 }

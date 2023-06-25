@@ -1,4 +1,5 @@
 import { cwd } from 'process';
+import { join } from 'path';
 import { readdir } from 'fs/promises';
 import { lstatSync } from 'fs';
 
@@ -21,7 +22,7 @@ export default async function lsHandler() {
 
   const content = [...folders, ...filesList];
 
-  const parsedList = content.map((item) => ({ Name: item, Type: lstatSync(item).isDirectory() ? 'Folder' : 'File' }));
+  const parsedList = content.map((item) => ({ Name: item, Type: lstatSync(join(cwd(), item)).isDirectory() ? 'Folder' : 'File' }));
 
   console.table(parsedList);
 }
