@@ -1,0 +1,13 @@
+export { default as addHandler } from './add.js';
+export { default as catHandler } from './cat.js';
+export { default as cdHandler } from './cd.js';
+export { default as compressHandler } from './compress.js';
+export { default as cpHandler } from './cp.js';
+export { default as decompressHandler } from './decompress.js';
+export { default as hashHandler } from './hash.js';
+export { default as lsHandler } from './ls.js';
+export { default as mvHandler } from './mv.js';
+export { default as osHandler } from './os.js';
+export { default as rmHandler } from './rm.js';
+export { default as rnHandler } from './rn.js';
+export { default as upHandler } from './up.js';
