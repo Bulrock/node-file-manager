@@ -50,7 +50,7 @@ export default function processCommand(command) {
       osHandler();
       break;
     case 'rm':
-      rmHandler();
+      rmHandler(...args);
       break;
     case 'rn':
       rnHandler(args);
