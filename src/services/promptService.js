@@ -13,8 +13,8 @@ export default function promptCommand() {
     try {
       processCommand(command);
     } catch (err) {
-      console.error(err)
-      // console.error(EXEC_ERROR_MESSAGE)
+      // console.error(err)
+      console.error(EXEC_ERROR_MESSAGE)
     }
     pwd();
 

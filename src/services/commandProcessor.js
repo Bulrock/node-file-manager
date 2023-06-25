@@ -1,3 +1,4 @@
+import { exit } from 'process';
 import {
   addHandler,
   catHandler,
@@ -22,7 +23,7 @@ export default function processCommand(command) {
       addHandler();
       break;
     case 'cat':
-      catHandler();
+      catHandler(...args);
       break;
     case 'cd':
       cdHandler(...args);
@@ -58,8 +59,7 @@ export default function processCommand(command) {
       upHandler();
       break;
     case '.exit':
-      process.exitCode = 1;
-      break;
+      exit(1);
     default:
       console.log(INVALID_INPUT_MESSGE);
   }
